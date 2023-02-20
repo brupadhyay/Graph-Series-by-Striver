@@ -1,0 +1,1 @@
+{"name":"Local: numOfProvinces","url":"e:\\Striver\\Graph Series by Striver\\G7 - Number of Provinces\\numOfProvinces.cpp","tests":[{"id":1676882019885,"input":"3\n1 0 1\n0 1 0\n1 0 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Striver\\Graph Series by Striver\\G7 - Number of Provinces\\numOfProvinces.cpp","group":"local","local":true}
