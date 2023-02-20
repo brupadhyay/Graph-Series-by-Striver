@@ -1,0 +1,1 @@
+{"name":"Local: islands","url":"e:\\Striver\\Graph Series by Striver\\G8 - Number of Islands\\islands.cpp","tests":[{"id":1676900862461,"input":"5 4\n0 1 1 0\n0 1 1 0\n0 0 1 0\n0 0 0 0 \n1 1 0 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Striver\\Graph Series by Striver\\G8 - Number of Islands\\islands.cpp","group":"local","local":true}
