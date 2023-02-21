@@ -1,0 +1,1 @@
+{"name":"Local: rottenOranges","url":"e:\\Striver\\Graph Series by Striver\\G10 - Rotten Oranges\\rottenOranges.cpp","tests":[{"id":1677016182848,"input":"1\n3 3\n0 1 2 \n0 1 1\n2 1 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Striver\\Graph Series by Striver\\G10 - Rotten Oranges\\rottenOranges.cpp","group":"local","local":true}
