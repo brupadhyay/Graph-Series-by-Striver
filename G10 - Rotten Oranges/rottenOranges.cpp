@@ -1,8 +1,7 @@
-//{ Driver Code Starts
+
 #include<bits/stdc++.h>
 using namespace std;
 
-// } Driver Code Ends
 class Solution 
 {
     public:
@@ -11,7 +10,9 @@ class Solution
         int n = grid.size();
         int m = grid[0].size();
         
+        //n x m
         int vis[n][m];
+        //n x m
         queue<pair<pair<int,int>,int>> q;
         int cntFresh = 0;
         for(int i = 0; i < n; i++){
