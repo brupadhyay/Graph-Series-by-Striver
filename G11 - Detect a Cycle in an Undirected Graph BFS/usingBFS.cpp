@@ -1,8 +1,7 @@
-//{ Driver Code Starts
+
 #include <bits/stdc++.h>
 using namespace std;
 
-// } Driver Code Ends
 class Solution {
     private:
     bool detect(int src, vector<int> adj[], int vis[]){
@@ -45,7 +44,6 @@ class Solution {
     }
 };
 
-//{ Driver Code Starts.
 int main() {
     int tc;
     cin >> tc;
@@ -68,4 +66,3 @@ int main() {
     }
     return 0;
 }
-// } Driver Code Ends
