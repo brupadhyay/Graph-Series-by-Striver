@@ -60,9 +60,9 @@ int main() {
         Solution obj;
         bool ans = obj.isCycle(V, adj);
         if (ans)
-            cout << "1\n";
+            cout << "1";
         else
-            cout << "0\n";
+            cout << "0";
     }
     return 0;
 }
