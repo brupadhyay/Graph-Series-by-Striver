@@ -9,12 +9,11 @@ class Solution {
       
         for(auto adjNode: adj[src]){
             if(vis[adjNode] == 0){
-                // cout << "Not visited " << adjNode << " "<< parent << endl;
+                
                 if(dfs(adjNode, src, adj, vis) == true){
                     return true;
                 }
             } else {
-                // cout << "visited " << adjNode << " "<< parent << endl;
                 if( adjNode != parent){
                     return true;
                 }
