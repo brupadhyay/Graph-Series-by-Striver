@@ -1,0 +1,1 @@
+{"name":"Local: usingDFS","url":"e:\\Striver\\Graph Series by Striver\\G15 - Number of Enclaves\\usingDFS.cpp","tests":[{"id":1677272620255,"input":"1\n4 4\n0 0 0 0\n1 0 1 0\n0 1 1 0\n0 0 0 0","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Striver\\Graph Series by Striver\\G15 - Number of Enclaves\\usingDFS.cpp","group":"local","local":true}
