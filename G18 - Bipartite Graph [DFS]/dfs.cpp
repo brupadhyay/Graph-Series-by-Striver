@@ -14,7 +14,7 @@ class Solution {
             if(colour[it] == -1){
                 if(dfs(it, V, adj, colour, !color) == false) return false;
             } else {
-                //if it is coloured then check if the current node's color is equal to the adjacent one
+                //if previously coloured then check if the current node's color is equal to the adjacent one
                 //if equal thereby u say it's not a bipartite graph
                 if(colour[it] == color){
                     return false;
