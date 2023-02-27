@@ -1,0 +1,1 @@
+{"name":"Local: dfs","url":"e:\\Striver\\Graph Series by Striver\\G18 - Bipartite Graph [DFS]\\dfs.cpp","tests":[{"id":1677489214986,"input":"1\n3 2\n0 1\n1 2","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Striver\\Graph Series by Striver\\G18 - Bipartite Graph [DFS]\\dfs.cpp","group":"local","local":true}
