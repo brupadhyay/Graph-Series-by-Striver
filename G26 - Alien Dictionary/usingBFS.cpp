@@ -20,7 +20,7 @@ class Solution{
             
             int len = min(s1.size(), s2.size());
             
-            //edge cases 1
+            
             bool flag = false;
             
             for(int j = 0; j < len; j++){
@@ -30,6 +30,7 @@ class Solution{
                     break;
                 }
             }
+            //edge case 1 ->
             //if all the character matches and bigger string
             //appears before shorter
             
@@ -52,7 +53,7 @@ class Solution{
             if(indegree[i] == 0) q.push(i);
         }
         
-        if(q.empty()) cout << "Not possible" << endl;
+        if(q.empty()) return "";
         
         //O(K + E) in DG - total degree = E
         while(!q.empty()){
