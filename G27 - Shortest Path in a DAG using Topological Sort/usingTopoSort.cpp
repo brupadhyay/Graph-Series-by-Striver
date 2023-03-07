@@ -8,6 +8,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Works for any node to be Source Node
+
 class Solution {
   private:
   void dfs(int node, vector<pair<int,int>> adj[], int vis[], stack<int> &st){
