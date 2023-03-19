@@ -17,12 +17,14 @@ using namespace std;
 class Solution {
 public:
     int wordLadderLength(string startWord, string targetWord, vector<string>& wordList) {
-       
+        // BFS traversal with pushing values in queue 
+        // when after a transformation, a word is found in wordList.
        queue<pair<string , int>>q;  
        q.push({startWord , 1});
        
-       //set for checking words effectively - O(N) space
-       unordered_set<string>st(wordList.begin() , wordList.end());
+       //Push all the words in the set
+       // to make deletion from it easier and in less time complexity.
+       unordered_set<string>st(wordList.begin() , wordList.end()); //SC - O(N)
        st.erase(startWord);
        
        while(!q.empty()){
