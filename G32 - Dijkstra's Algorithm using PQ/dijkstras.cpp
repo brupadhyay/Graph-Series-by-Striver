@@ -35,15 +35,15 @@ public:
             // element whether the prev dist is larger than current or not.
             for (auto it : adj[node])
             {
-                int v = it[0];
-                int w = it[1];
-                if (dis + w < distTo[v])
+                int adjNode = it[0];
+                int weight = it[1];
+                if (dis + weight < distTo[adjNode])
                 {
-                    distTo[v] = dis + w;
+                    distTo[adjNode] = dis + weight;
     
                     // If current distance is smaller,
                     // push it into the queue.
-                    pq.push({dis + w, v});
+                    pq.push({dis + weight, adjNode});
                 }
             }
         }
