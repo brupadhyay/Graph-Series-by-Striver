@@ -28,6 +28,7 @@ public:
 
         // Iterate through the graph using a queue like in Dijkstra with 
         // popping out the element with min stops first.
+        // O(E) where E is flights.size()
         while (!q.empty())
         {
             auto it = q.front();
