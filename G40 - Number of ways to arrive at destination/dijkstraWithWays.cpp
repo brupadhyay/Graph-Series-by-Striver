@@ -8,8 +8,9 @@ class Solution {
     int countPaths(int n, vector<vector<int>>& roads) {
         vector<pair<int,int>> adj[n];
         for(auto it: roads){
-            // u -- u
+            // u -- v
             adj[it[0]].push_back({it[1], it[2]});
+            // v -- u
             adj[it[1]].push_back({it[0], it[2]});
         }
         
