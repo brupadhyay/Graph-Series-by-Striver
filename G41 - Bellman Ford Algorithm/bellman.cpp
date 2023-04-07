@@ -17,6 +17,7 @@ class Solution {
         
         dist[S] = 0;
         
+        // O(V x E)
         for(int i = 0;i<V-1;i++){
             for(auto it: edges){
                 int u = it[0];
