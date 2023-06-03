@@ -1,26 +1,29 @@
-// finding sum of edges of minimum spanning tree
-
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
+// } Driver Code Ends
 class Solution
 {
 public:
     // Function to find sum of weights of edges of the Minimum Spanning Tree.
     int spanningTree(int V, vector<vector<int>> adj[])
     {
+        // E space
+        vector<pair<int, int>> minimumEdges;
+
         // E
-        priority_queue<pair<int, int>,
-                       vector<pair<int, int>>,
-                       greater<pair<int, int>>>
+        priority_queue<pair<int, pair<int, int>>,
+                       vector<pair<int, pair<int, int>>>,
+                       greater<pair<int, pair<int, int>>>>
             pq;
 
         int vis[V] = {0};
         int sum = 0;
 
-        pq.push({0, 0}); // {distance, node};
-        // E log E + E log E (overall)
-        // ~ E log E
+        pq.push({0, {0, -1}}); // {distance, node, parent};
+        // E log E + E log E
+        // E log E
         while (!pq.empty())
         {
 
@@ -29,7 +32,8 @@ public:
             pq.pop();
 
             int dist = it.first;
-            int node = it.second;
+            int node = it.second.first;
+            int parent = it.second.second;
 
             if (vis[node])
                 continue;
@@ -38,6 +42,8 @@ public:
             sum += dist;
             vis[node] = 1;
 
+            if (parent != -1)
+                minimumEdges.push_back({node, parent});
             // E log E
             for (auto it : adj[node])
             {
@@ -45,9 +51,14 @@ public:
                 int adjNode = it[0];
                 if (!vis[adjNode])
                 {
-                    pq.push({edW, adjNode});
+                    pq.push({edW, {adjNode, node}});
                 }
             }
+        }
+        // printing MST
+        for (auto it : minimumEdges)
+        {
+            cout << it.first << " -> " << it.second << endl;
         }
         return sum;
     }
