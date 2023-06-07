@@ -14,17 +14,17 @@ public:
             parent[i] = i;
         }
     }
-    int findPar(int u)
+    int findUPar(int u)
     {
         if (u == parent[u])
             return u;
-        return parent[u] = findPar(parent[u]);
+        return parent[u] = findUPar(parent[u]);
     }
 
     void unionByRank(int u, int v)
     {
-        int ulp_u = findPar(u);
-        int ulp_v = findPar(v);
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
 
         if (ulp_u == ulp_v)
             return;
@@ -56,7 +56,7 @@ public:
         // E x 4 x alpha
         for (auto it : edge)
         {
-            if (ds.findPar(it[0]) == ds.findPar(it[1]))
+            if (ds.findUPar(it[0]) == ds.findUPar(it[1]))
             {
                 extraEdges++;
             }
@@ -66,7 +66,7 @@ public:
         // N * 4 x alpha
         for (int i = 0; i < n; i++)
         {
-            if (ds.findPar(i) == i)
+            if (ds.findUPar(i) == i)
                 numberOfConnectedComponents++;
         }
         bool isPossible = extraEdges >= numberOfConnectedComponents - 1;

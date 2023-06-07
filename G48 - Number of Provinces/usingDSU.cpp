@@ -16,17 +16,17 @@ public:
         }
     }
 
-    int findPar(int u)
+    int findUPar(int u)
     {
         if (u == parent[u])
             return u;
-        return parent[u] = findPar(parent[u]);
+        return parent[u] = findUPar(parent[u]);
     }
 
     void unionBySize(int u, int v)
     {
-        int ulp_u = findPar(u);
-        int ulp_v = findPar(v);
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
 
         if (ulp_u == ulp_v)
             return;
@@ -68,7 +68,7 @@ public:
         // V x 4 x alpha
         for (int i = 0; i < V; i++)
         {
-            if (ds.findPar(i) == i)
+            if (ds.findUPar(i) == i)
                 numberOfProvinces++;
         }
         return numberOfProvinces;

@@ -23,18 +23,18 @@ public:
         }
     }
 
-    int findPar(int node)
+    int findUPar(int node)
     {
         if (parent[node] == node)
             return node;
 
-        return parent[node] = findPar(parent[node]);
+        return parent[node] = findUPar(parent[node]);
     }
 
     void unionByRank(int u, int v)
     {
-        int ulp_u = findPar(u);
-        int ulp_v = findPar(v);
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
 
         // belong to the same component
         if (ulp_v == ulp_u)
@@ -56,8 +56,8 @@ public:
 
     void unionBySize(int u, int v)
     {
-        int ulp_u = findPar(u);
-        int ulp_v = findPar(v);
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
 
         // belong to the same component
         if (ulp_u == ulp_v)
@@ -85,7 +85,7 @@ int main()
     ds.unionBySize(4, 5);
     ds.unionBySize(6, 7);
 
-    if (ds.findPar(3) == ds.findPar(7))
+    if (ds.findUPar(3) == ds.findUPar(7))
     {
         cout << "Same\n";
     }
@@ -95,7 +95,7 @@ int main()
     ds.unionBySize(5, 6);
     ds.unionBySize(3, 7);
 
-    if (ds.findPar(3) == ds.findPar(7))
+    if (ds.findUPar(3) == ds.findUPar(7))
     {
         cout << "Same\n";
     }

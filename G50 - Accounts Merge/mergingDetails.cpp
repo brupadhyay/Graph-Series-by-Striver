@@ -17,17 +17,17 @@ public:
         }
     }
 
-    int findPar(int u)
+    int findUPar(int u)
     {
         if (u == parent[u])
             return u;
-        return parent[u] = findPar(parent[u]);
+        return parent[u] = findUPar(parent[u]);
     }
 
     void unionBySize(int u, int v)
     {
-        int ulp_u = findPar(u);
-        int ulp_v = findPar(v);
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
 
         if (ulp_u == ulp_v)
             return;
@@ -75,7 +75,7 @@ public:
         {
             int node = it.second;
             string email = it.first;
-            merged[ds.findPar(node)].push_back(email);
+            merged[ds.findUPar(node)].push_back(email);
         }
         vector<vector<string>> ans;
 
