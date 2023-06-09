@@ -7,4 +7,4 @@
 ### To watch the series - [takeUForward/Graph](https://www.youtube.com/playlist?list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn)
 
 <h3>Handwritten Notes -
-<a href="https://github.com/brupadhyay/Graph-Series-by-Striver/blob/main/Striver_Graph_Series_Notes.pdf" download>Download</a></h3>
+<a href="/Striver_Graph_Series_Notes.pdf" download="notes">Download</a></h3>
