@@ -8,5 +8,3 @@
 
 <h3>Handwritten Notes -
 <a href="/Striver_Graph_Series_Notes.pdf" download="notes">Download</a></h3>
-
-[notes]("/Striver_Graph_Series_Notes.pdf")
